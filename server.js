@@ -2,7 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 require("dotenv").config();
-const db = require("../chatBotBackend/db");
+const path = require("path");
+
+// Use path.resolve to get absolute path for the db file
+const db = require(path.resolve(__dirname, "../chatBotBackend/db"));
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +15,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/getData", (req, res) => {
-  res.send("hello client i'm how are you");
+  res.send("Hello client, I'm how are you?");
 });
 
 // Importing router files
