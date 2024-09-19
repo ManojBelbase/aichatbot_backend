@@ -15,6 +15,6 @@ const contentSchema = new mongoose.Schema({
   },
 });
 
-// creating model for content Schema
+// Creating a model for the content schema
 const Content = mongoose.model("Content", contentSchema);
 module.exports = Content;

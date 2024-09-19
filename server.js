@@ -5,7 +5,7 @@ require("dotenv").config();
 const path = require("path");
 
 // Use path.resolve to get absolute path for the db file
-const db = require(path.resolve(__dirname, "./db"));
+const db = require(path.resolve(__dirname, "./db")); // Ensure the db.js exists in root
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,7 +15,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/getData", (req, res) => {
-  res.send("Hello client, I'm how are you?");
+  res.send("Hello client, how are you?");
 });
 
 // Importing router files
