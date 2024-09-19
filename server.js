@@ -5,7 +5,7 @@ require("dotenv").config();
 const path = require("path");
 
 // Use path.resolve to get absolute path for the db file
-const db = require(path.resolve(__dirname, "../chatBotBackend/db"));
+const db = require(path.resolve(__dirname, "./db"));
 
 const app = express();
 const PORT = process.env.PORT || 3000;
